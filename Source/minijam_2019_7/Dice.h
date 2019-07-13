@@ -19,11 +19,16 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dice", Meta = (BlueprintProtected = "true"))
+	float RollingAngularVelocityThreshold;
+
 public:	
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintPure, Category = "Pickups")
 	bool isRolling();
 
+	UFUNCTION(BlueprintPure, Category = "Pickups")
 	int GetCurrentValue();
 
 private:

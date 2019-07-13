@@ -22,7 +22,7 @@ void ADice::BeginPlay()
 // Called when the game starts or when spawned
 bool ADice::isRolling()
 {
-	return false;
+	return Mesh->GetPhysicsAngularVelocity().SizeSquared() > RollingAngularVelocityThreshold;
 }
 
 // Called when the game starts or when spawned
