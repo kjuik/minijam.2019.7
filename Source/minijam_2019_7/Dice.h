@@ -34,4 +34,9 @@ public:
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Dice", meta = (AllowPrivateAccess = "true"))
 	class UStaticMeshComponent* Mesh;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Dice", meta = (AllowPrivateAccess = "true"))
+	class UTextRenderComponent* DebugText;
+
+	void RefreshDebugText();
 };
